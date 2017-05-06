@@ -18,7 +18,7 @@ def span(input_list,predicate):
     rest = [x for x in input_list if x not in prefix]
     return (prefix,rest)
 
-assert span('123\t456',predicate=not_tab) == (['1',2','3'],['\t','4','5,','6'])
+assert span('123\t456',predicate=not_tab) == (['1','2','3'],['\t','4','5,','6'])
 
 def artist_id_map(line):
     (id, name) = span(line,predicate=not_tab)
